@@ -54,8 +54,8 @@ void inputMove(){
     scanf("%d", &playerInput[1]);
     
     //decrement each input so that you first row is 1 instead of 0
-    //playerInput[0]--;
-    //playerInput[1]--;
+    playerInput[0]--;
+    playerInput[1]--;
     
     printf("%d", playerInput[0]);
     printf("%d\n", playerInput[1]);
@@ -168,6 +168,7 @@ int main(){
         printf("\n\n O WINS");
     }
     if(isGameover() == -1){
+	    printBoard();
         printf("\n\n ITS A TIE");
     }
     return 0;
